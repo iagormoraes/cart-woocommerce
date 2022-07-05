@@ -608,7 +608,7 @@ class WC_WooMercadoPago_Pix_Gateway extends WC_WooMercadoPago_Payment_Abstract {
 
 			$order = $order->get_id();
 
-			$qr_code_image = get_option('siteurl') . '/?wc-api=wc_mp_pix_image&id=' . $order;
+			$qr_code_image = get_option('siteurl') . '/wc-api/wc_mp_pix_image?id=' . $order;
 
 			if ( ! in_array( 'gd', get_loaded_extensions(), true ) ) {
 				$qr_code_image = $src . ',' . $qr_image;
